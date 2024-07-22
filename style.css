@@ -1,0 +1,416 @@
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(230, 230, 230);
+  --main-color: rgb(51, 51, 255);
+  --color-1: rgb(0, 255, 255);
+  --color-2: rgb(0, 72, 255);
+  --color-3: rgb(89, 0, 255);
+  --color-4: rgb(149, 0, 255);
+  --color-5: rgb(225, 0, 255);
+}
+
+.light-theme {
+  --primary-color: rgb(255, 250, 250);
+  --secondary-color: rgb(0, 0, 0);
+  --main-color: rgb(207, 51, 255);
+  --color-1: rgb(255, 0, 0);
+  --color-2: rgb(255, 123, 0);
+  --color-3: rgb(136, 255, 0);
+  --color-4: rgb(0, 255, 255);
+  --color-5: rgb(0, 128, 255);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  cursor: default;
+}
+
+#preloader{
+  background: #fff url(preloader.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.nav {
+  margin: 20px auto;
+  width: 85%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav img {
+  width: 35px;
+  height: 35px;
+}
+
+.nav img:hover{
+  cursor: pointer;
+}
+
+.nav .login {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.nav .login:hover{
+  cursor: pointer;
+}
+
+hr {
+  width: 85%;
+  margin: 10px auto;
+  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+
+.header-c {
+  /* color: var(--secondary-color); */
+  margin: 50px auto;
+  width: 85%;
+  text-align: center;
+  font-size: 32px;
+  animation: infinite 3s colors linear;
+  /* background: linear-gradient(
+    220deg,
+    var(--color-1),
+    var(--color-2),
+    var(--color-3),
+    var(--color-4),
+    var(--color-5)
+  ); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  transition: 1s;
+}
+
+.header-c:hover {
+  cursor: default;
+  transform: scale(1.1);
+}
+
+@keyframes colors {
+  0% {
+    background: linear-gradient(
+      220deg,
+      var(--color-1),
+      var(--color-2),
+      var(--color-3),
+      var(--color-4),
+      var(--color-5)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    background: linear-gradient(
+      220deg,
+      var(--color-2),
+      var(--color-3),
+      var(--color-4),
+      var(--color-5),
+      var(--color-1)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  40% {
+    background: linear-gradient(
+      220deg,
+      var(--color-3),
+      var(--color-4),
+      var(--color-5),
+      var(--color-1),
+      var(--color-2)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  60% {
+    background: linear-gradient(
+      220deg,
+      var(--color-4),
+      var(--color-5),
+      var(--color-1),
+      var(--color-2),
+      var(--color-3)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  80% {
+    background: linear-gradient(
+      220deg,
+      var(--color-5),
+      var(--color-1),
+      var(--color-2),
+      var(--color-3),
+      var(--color-4)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(
+      220deg,
+      var(--color-1),
+      var(--color-2),
+      var(--color-3),
+      var(--color-4),
+      var(--color-5)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.paragraf {
+  color: var(--secondary-color);
+  opacity: 0.7;
+  text-align: center;
+  margin: 10px auto;
+  width: 60%;
+}
+
+.btn-c {
+  margin: 0 auto;
+  width: 85%;
+  text-align: center;
+}
+
+.btn-c .gotademo {
+  text-align: center;
+  margin: 90px auto;
+  padding: 10px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 30px 0px var(--main-color);
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.btn-c .gotademo:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+}
+
+.login-c{
+  position: absolute;
+  position: fixed;
+  z-index: 10;
+  top: 3rem;
+  bottom: 3rem;
+  left: 2rem;
+  right: 2rem;
+  border-radius: 1.3rem;
+  padding: 1rem 3rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  max-width: 44rem;
+  margin: 0 auto;
+  transform: translateY(-50rem);
+  transition: 2s;
+}
+
+.login-c b{
+  position: fixed;
+  top: 4rem;
+  right: 3.3rem;
+  color: var(--primary-color);
+}
+
+.login-c b:hover{
+  cursor: pointer;
+}
+
+.login-c h1{
+  text-align: center;
+  margin: 1rem;
+  font-size: 2.3rem;
+  color: var(--primary-color);
+}
+
+.login-c form{
+  margin: 1rem 0;
+}
+
+.login-c form div{
+  display: flex;
+  flex-direction: column;
+}
+
+.login-c form div label{
+  opacity: 0.7;
+}
+
+.login-c form div span{
+  display: flex;
+  padding: 10px 0 0 0;
+}
+
+.login-c form div hr{
+  width: 100%;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  opacity: 0.1;
+}
+
+.login-c form div span input:focus{
+  outline: none;
+}
+
+.login-c form div span img{
+  width: 1.2rem;
+  opacity: 0.3;
+}
+
+.login-c form div span input{
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  height: 1.2rem;
+  font-size: 1rem;
+  margin-left: .5rem;
+}
+
+.login-c form a{
+  text-decoration: none;
+  color: var(--primary-color);
+  opacity: 0.7;
+  text-align: right;
+  display: block;
+}
+
+.login-c form button{
+  margin: 1.3rem 0;
+  width: 100%;
+  padding: .5rem 4rem;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  background: linear-gradient(90deg,var(--color-1),var(--color-2),var(--color-3),var(--color-4),var(--color-5));
+  border-radius: 10rem;
+  text-align: center;
+  transition: .5s;
+}
+
+.login-c form button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  animation: infinite 1.2s btn_colors linear;
+}
+
+
+@keyframes btn_colors {
+  0% {
+    background: linear-gradient(
+      90deg,
+      var(--color-1),
+      var(--color-2),
+      var(--color-3),
+      var(--color-4),
+      var(--color-5)
+    );
+  }
+  20% {
+    background: linear-gradient(
+      90deg,
+      var(--color-2),
+      var(--color-3),
+      var(--color-4),
+      var(--color-5),
+      var(--color-1)
+    );
+  }
+  40% {
+    background: linear-gradient(
+      90deg,
+      var(--color-3),
+      var(--color-4),
+      var(--color-5),
+      var(--color-1),
+      var(--color-2)
+    );
+  }
+  60% {
+    background: linear-gradient(
+      90deg,
+      var(--color-4),
+      var(--color-5),
+      var(--color-1),
+      var(--color-2),
+      var(--color-3)
+    );
+  }
+  80% {
+    background: linear-gradient(
+      90deg,
+      var(--color-5),
+      var(--color-1),
+      var(--color-2),
+      var(--color-3),
+      var(--color-4)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      90deg,
+      var(--color-1),
+      var(--color-2),
+      var(--color-3),
+      var(--color-4),
+      var(--color-5)
+    );
+  }
+}
+
+.login-c .bottom-c{
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-c .bottom-c p{
+  text-align: center;
+  font-size: .85rem;
+  opacity: 0.6;
+}
+
+.login-c .bottom-c .img-c{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.login-c .bottom-c .img-c input{
+  margin: 1rem 0;
+  width: 2.8rem;
+}
+
+.login-c .bottom-c a{
+  display: block;
+  text-align: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 1rem;
+  font-size: 0.8rem;
+}
